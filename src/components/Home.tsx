@@ -42,7 +42,7 @@ export default function HomePage({
           </h1>
 
           <p className='lg:text-3xl text-xl font-bold'>
-            I'm a{' '}
+            {'I\'m a '}
             <TypeAnimation
               className='text-primary text-xl sm:text-3xl'
               sequence={[

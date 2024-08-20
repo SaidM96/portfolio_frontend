@@ -63,7 +63,7 @@ export default function useHandleScroll() {
     return () => {
       observer.disconnect();
     };
-  }, []);
+  });
 
   return {
     homePageRef: homePageRef,
