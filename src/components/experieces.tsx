@@ -1,120 +1,114 @@
 'use client';
 import { FaReact } from 'react-icons/fa';
-import ExperiencesItem from './experience-item';
 import { cn } from '@/lib/utils';
+import TimeLine from './time-line';
+import { useState } from 'react';
+import { Button } from './ui/button';
 
 const Exp = [
   {
     Icon: FaReact,
-    title: 'Development',
-    description: 'Improving website visibility and search engine rankings',
+    title: 'Exp Development',
+    description: 'Improving website',
     year: '2022 - Present',
-    isRight: false
+    metadata: {}
   },
   {
     Icon: FaReact,
-    title: 'Development',
-    description: 'Improving website visibility and search engine rankings',
-    year: '2022 - Present',
-    isRight: true
+    title: 'Hood Businesses',
+    description: 'Innovative solutions for a digital world.',
+    year: '2022 - 6 Months',
+    metadata: {}
   },
   {
     Icon: FaReact,
-    title: 'Development',
-    description: 'Improving website visibility and search engine rankings',
-    year: '2022 - Present',
-    isRight: false
+    title: 'Lendstack',
+    description: 'Supercharging Global Lending with AI',
+    year: '2023 - (13 Months)',
+    metadata: {}
   },
   {
     Icon: FaReact,
-    title: 'Development',
-    description: 'Improving website visibility and search engine rankings',
+    title: 'Exp Development',
+    description: 'Improving website',
     year: '2022 - Present',
-    isRight: true
+    metadata: {}
+  }
+];
+
+const etudes = [
+  {
+    Icon: FaReact,
+    title: 'Anoual - High School',
+    description: 'Mathematics and sciences',
+    year: '2013 - 2014',
+    metadata: {}
+  },
+  {
+    Icon: FaReact,
+    title: 'Ibn zohr University',
+    description: 'Mathematics and Computer Science',
+    year: '2014 - 2018',
+    metadata: {}
+  },
+  {
+    Icon: FaReact,
+    title: '1337 Coding School',
+    description: 'Future Is Loading...',
+    year: '2020 - Present',
+    metadata: {}
+  },
+  {
+    Icon: FaReact,
+    title: 'Frontend Masters',
+    description: 'Path to Senior Developer',
+    year: '2022 - Present',
+    metadata: {}
   }
 ];
 
 export default function Experiences() {
+  const [swap, setSwap] = useState(false);
+
   return (
-    <div className='flex flex-col items-center space-y-16 mt-6 w-full'>
-      <h1 className='sm:text-xl lmd:text-2xl xl:text-6xl text-white text-center font-bold'>
-        My <span className='text-primary'>Experiences</span>
+    <div className='flex flex-col items-center sm:space-y-16 space-y-6 mt-6 w-full'>
+      <h1 className='text-2xl sm:text-4xl lg:text-6xl text-white text-center font-bold'>
+        My <span className='text-primary'>Journey</span>
       </h1>
 
-      <div className='w-[316px] ss:w-[416px] sm:w-[616px] xl:w-[832px] flex flex-col h-full'>
-        {Exp.map((item, index) => (
-          <div
-            className={cn(
-              item.isRight ? 'self-end' : 'flex-row-reverse self-start',
-              'flex'
-            )}
-          >
-            <div className='w-4 xl:w-8 h-full relative flex items-center justify-center'>
-              <div className='w-1 xl:w-2 h-full bg-primary'></div>
-              <div className='w-4 h-4 xl:w-8 xl:h-8 rounded-full bg-primary absolute z-10 top-1'></div>
-            </div>
-            <ExperiencesItem key={index} {...item} />
-          </div>
-        ))}
+      <div className='flex bg-primary p-[1px] rounded-[24px] w-[266px] sm:w-[616px] xl:w-[516px]'>
+        <Button
+          onClick={() => setSwap(false)}
+          className={cn(
+            swap ? 'text-background' : 'text-primary',
+            swap
+              ? 'hover:bg-primary bg-primary'
+              : 'bg-background hover:bg-background',
+            'text-md sm:text-2xl w-1/2 text-center font-bold border-2 rounded-[24px] border-primary p-4 sm:p-6'
+          )}
+        >
+          Experiences
+        </Button>
+
+        <Button
+          onClick={() => setSwap(true)}
+          className={cn(
+            swap ? 'text-primary' : 'text-background',
+            swap
+              ? 'bg-background hover:bg-background'
+              : 'hover:bg-primary bg-primary',
+            'text-md sm:text-2xl w-1/2 text-center font-bold border-2 rounded-[24px] border-primary p-4 sm:p-6'
+          )}
+        >
+          Etudes
+        </Button>
       </div>
 
-      {/* <div className='w-[400px] sm:w-[600px] xl:w-[800px] flex flex-col items-center h-full'>
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight={false}
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight={false}
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight={false}
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight={false}
-        />
-        <ExperiencesItem
-          title='Web Development'
-          description='Improving website visibility and search engine rankings'
-          year='2022 - Present'
-          isRight
-        />
-      </div> */}
-      {}
+      {swap ? (
+        <TimeLine key={swap ? 12 : 10} elements={etudes} />
+      ) : (
+        <TimeLine elements={Exp} />
+      )}
     </div>
   );
 }
