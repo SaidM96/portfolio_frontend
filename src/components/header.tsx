@@ -52,7 +52,7 @@ export default function Header({
       }}
       className='fixed z-10 flex items-center justify-between w-full px-4 sm:px-[7%] pb-4 sm:pb-6 pt-4 sm:pt-6 bg-transparent'
     >
-      <p className='font-bold text-2xl sm:text-4xl xl:text-6xl text-white'>
+      <p className='font-bold text-2xl 2xl:text-4xl text-white'>
         {'Said '}
         <span className='text-primary'>mia</span>
       </p>
@@ -66,7 +66,7 @@ export default function Header({
                 onClick={() => item.scrollCallBack()}
                 className={cn(
                   selectedSection === item.name ? 'text-primary' : 'text-white',
-                  'p-0 bg-transparent font-bold text-lg xl:text-2xl hover:bg-transparent hover:text-primary hover:underline hover:underline-offset-8 hover:decoration-4'
+                  'p-0 bg-transparent font-bold text-lg xl:text-xl 2xl:text-2xl hover:bg-transparent hover:text-primary hover:underline hover:underline-offset-8 hover:decoration-4'
                 )}
                 key={index}
               >

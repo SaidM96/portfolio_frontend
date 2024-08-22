@@ -71,8 +71,8 @@ export default function Experiences() {
   const [swap, setSwap] = useState(false);
 
   return (
-    <div className='flex flex-col items-center sm:space-y-16 space-y-6 mt-6 w-full'>
-      <h1 className='text-2xl sm:text-4xl lg:text-6xl text-white text-center font-bold'>
+    <div className='flex flex-col items-center sm:space-y-10 xl:space-x-12 space-y-6 mt-6 w-full'>
+      <h1 className='text-2xl sm:text-4xl  text-white text-center font-bold'>
         My <span className='text-primary'>Journey</span>
       </h1>
 
@@ -84,7 +84,7 @@ export default function Experiences() {
             swap
               ? 'hover:bg-primary bg-primary'
               : 'bg-background hover:bg-background',
-            'text-md sm:text-2xl w-1/2 text-center font-bold border-2 rounded-[24px] border-primary p-4 sm:p-6'
+            'text-md sm:text-xl w-1/2 text-center font-bold border-2 rounded-[24px] border-primary p-4 sm:p-6'
           )}
         >
           Experiences
@@ -97,7 +97,7 @@ export default function Experiences() {
             swap
               ? 'bg-background hover:bg-background'
               : 'hover:bg-primary bg-primary',
-            'text-md sm:text-2xl w-1/2 text-center font-bold border-2 rounded-[24px] border-primary p-4 sm:p-6'
+            'text-md sm:text-xl w-1/2 text-center font-bold border-2 rounded-[24px] border-primary p-4 sm:p-6'
           )}
         >
           Etudes

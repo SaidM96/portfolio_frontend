@@ -34,17 +34,17 @@ export default function HomePage({
   scrollToContactMeCallBack: () => void;
 }) {
   return (
-    <div className='flex h-full flex-col items-center xl:items-start xl:flex-row w-full text-white justify-center gap-10 lmd:justify-between'>
+    <div className='flex h-full flex-col items-center xl:items-start xl:flex-row w-full text-white justify-center gap-10 xl:justify-between '>
       <div className='flex h-1/2 flex-col xl:h-full justify-center space-y-3 sm:space-y-6 xl:justify-start  xl:pt-20 xl:items-start w-full xl:w-1/2 xl:order-none order-2 items-center text-center xl:text-start'>
         <div className='flex flex-col space-y-2 sm:space-y-4 text-white'>
-          <h1 className='xl:text-6xl text-2xl font-bold'>
+          <h1 className='xl:text-3xl 2xl:text-6xl text-2xl font-bold'>
             Hi, My name is <span className='text-primary'>Said</span>
           </h1>
 
-          <p className='lg:text-3xl text-xl font-bold'>
-            {'I\'m a '}
+          <p className='2xl:text-3xl lg:text-2xl text-xl font-bold'>
+            {"I'm a "}
             <TypeAnimation
-              className='text-primary text-xl sm:text-3xl'
+              className='text-primary 2xl:text-3xl lg:text-2xl text-xl'
               sequence={[
                 'Frontend Developer',
                 1000,
@@ -58,7 +58,7 @@ export default function HomePage({
             />
           </p>
 
-          <p className='xl:text-xl text-sm sm:text-lg font-bold py-4 sm:px-20 xl:px-0'>
+          <p className='xl:text-xl text-sm sm:text-lg font-bold sm:px-20 xl:px-0'>
             As a Full Stack Developer and a student at 1337 Coding school ( Part
             of 42 Network ), I am deeply passionate about computer science and
             problem-solving. My primary focus lies in web development, where I
@@ -110,14 +110,14 @@ export default function HomePage({
       <Parallax>
         <motion.div
           whileHover={{}}
-          className='relative xl:self-start self-center h-[200px] w-[200px] s:w-[250px] s:h-[250px] lmd:h-[600px] lmd:w-[600px] flex justify-center items-center order-1'
+          className='relative xl:self-start self-center h-[200px] w-[200px] s:w-[250px] s:h-[250px] sm:h-[300px] sm:w-[300px] xl:h-[400px] xl:w-[400px] flex justify-center items-center mb-2 order-1'
         >
           <motion.div
             initial={{ opacity: 0 }}
             animate={{
               opacity: 1
             }}
-            className='h-[200px] w-[200px] s:w-[300px] s:h-[300px] lmd:h-[600px] lmd:w-[600px] '
+            className='h-[200px] w-[200px] s:w-[250px] s:h-[250px] sm:h-[300px] sm:w-[300px] xl:h-[400px] xl:w-[400px]'
           >
             <Image
               style={{

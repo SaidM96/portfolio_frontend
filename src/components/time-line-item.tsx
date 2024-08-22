@@ -36,7 +36,7 @@ export default function TimelineItem({
         )}
       >
         <p className='px-2'>{year}</p>
-        <div className='bg-background hover:border-4 text-white py-2 px-4 sm:py-4 sm:px-6 grid gap-2 border-2 border-primary mt-3 mb-4 rounded-[50px]'>
+        <div className='bg-background hover:border-4 text-white py-2 px-4 sm:px-6 grid gap-2 border-2 border-primary mt-3 mb-4 rounded-[50px]'>
           <p className=' text-primary'>{title}</p>
           <p className='text-primary line-clamp-1 text-white text-opacity-50 font-medium'>
             {description}
