@@ -45,6 +45,12 @@ export default function Header({
     }
   ];
 
+   const handleDownload = () => {
+     const fileUrl = '/saidmia.resume.pdf';
+    //  window.location.href = fileUrl;
+     window.open(fileUrl, '_blank');
+   };
+
   return (
     <div
       style={{
@@ -83,6 +89,7 @@ export default function Header({
           whileTap={{
             scale: 0.95
           }}
+          onClick={handleDownload}
           className='sm:py-2 py-1 flex items-center gap-3 px-4 sm:px-6 bg-primary rounded-[24px] text-black text-sm font-bold'
         >
           <p className=''>Download Resume</p>
@@ -130,6 +137,7 @@ export default function Header({
                 whileTap={{
                   scale: 0.95
                 }}
+                onClick={handleDownload}
                 className='sm:py-2 py-1 flex items-center gap-3 px-4 sm:px-6 bg-primary rounded-[24px] text-black text-sm font-bold'
               >
                 <p className=''>Download Resume</p>
