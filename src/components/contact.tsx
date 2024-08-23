@@ -1,12 +1,15 @@
 import React from 'react';
-import { Controller, useForm } from 'react-hook-form';
+import {  useForm } from 'react-hook-form';
 import { Textarea } from './ui/textarea';
-import { Button } from './ui/button';
+import { motion } from 'framer-motion';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import FormInputItem from './form-input-form';
 import { Form, FormField } from './ui/form';
 import { Input } from './ui/input';
+import useSendMeMsg from '@/hooks/send-me-message';
+import { FaSpinner } from "react-icons/fa6";
+
 export default function Contact() {
   const schema = z.object({
     email: z.string().email({
@@ -27,8 +30,18 @@ export default function Contact() {
     }
   });
 
-  const onSubmit = (data: any) => {
+  const mutation = useSendMeMsg({
+    onSuccess: () => {
+      form.reset();
+    },
+    onError: () => {
+      console.log('error');
+    }
+  });
+
+  const onSubmit = (data: FormData) => {
     console.log(data);
+    mutation.mutate({...data});
   };
 
   return (
@@ -105,9 +118,19 @@ export default function Contact() {
               />
             )}
           />
-          <Button className='max-lg:p-x-4 lg:w-1/2 rounded-lg sm:rounded-3xl h-12 text-black font-bold text-sm'>
-            Send Message
-          </Button>
+
+          <motion.button
+            whileTap={{
+              scale: 0.95
+            }}
+            disabled={mutation.isPending}
+            type='submit'
+            className='inline-flex items-center justify-center whitespace-nowrap bg-primary max-lg:w-[70%] lg:w-1/2 rounded-3xl h-12 text-black font-bold text-sm'
+          >{
+            mutation.isPending ? <FaSpinner className='animate-spin text-2xl' /> :  'Send Message' 
+          }
+            
+          </motion.button>
         </div>
       </form>
     </Form>

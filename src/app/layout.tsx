@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import { Providers } from './provider';
 import Header from '@/components/header';
+import ReactQueryProvider from '@/lib/provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className='flex min-h-screen w-screen flex-col items-center bg-background px-4 sm:px-[7%]  overflow-x-hidden relative'>
           <Providers>
+            <ReactQueryProvider>
             {children}
+            </ReactQueryProvider>
           </Providers>
         </main>
       </body>

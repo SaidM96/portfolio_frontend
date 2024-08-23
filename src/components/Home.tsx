@@ -8,11 +8,12 @@ import { FiDownload } from 'react-icons/fi';
 import { TypeAnimation } from 'react-type-animation';
 import { Parallax } from 'react-scroll-parallax';
 import Link from 'next/link';
+import { FaInstagram } from 'react-icons/fa';
 
 const Icons = [
   {
-    link: '',
-    Icon: IoCallSharp
+    link: 'https://www.instagram.com/saidm2168/',
+    Icon: FaInstagram
   },
   {
     link: 'https://github.com/SaidM96',
