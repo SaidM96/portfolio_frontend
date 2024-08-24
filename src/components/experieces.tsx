@@ -8,30 +8,30 @@ import { Button } from './ui/button';
 const Exp = [
   {
     Icon: FaReact,
-    title: 'Exp Development',
-    description: 'Improving website',
-    year: '2022 - Present',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
     title: 'Hood Businesses',
-    description: 'Innovative solutions for a digital world.',
+    description: 'Full stack developer: reactjs / nodejs',
     year: '2022 - 6 Months',
     metadata: {}
   },
   {
     Icon: FaReact,
-    title: 'Lendstack',
-    description: 'Supercharging Global Lending with AI',
-    year: '2023 - (13 Months)',
+    title: 'Freelance',
+    description: 'Digital Store - Nextjs / Typescript',
+    year: '2022 - 3 Months',
     metadata: {}
   },
   {
     Icon: FaReact,
-    title: 'Exp Development',
-    description: 'Improving website',
-    year: '2022 - Present',
+    title: 'Freelance',
+    description: 'Landing Page - Nextjs / Typescript',
+    year: '2023 - 3 Months',
+    metadata: {}
+  },
+  {
+    Icon: FaReact,
+    title: 'Lendstack',
+    description: 'Frontend developer: Nextjs / Typescript',
+    year: '2023 - (11 Months)',
     metadata: {}
   }
 ];
@@ -55,14 +55,14 @@ const etudes = [
     Icon: FaReact,
     title: '1337 Coding School',
     description: 'Future Is Loading...',
-    year: '2020 - Present',
+    year: '2021 - Present',
     metadata: {}
   },
   {
     Icon: FaReact,
     title: 'Frontend Masters',
     description: 'Path to Senior Developer',
-    year: '2022 - Present',
+    year: '2023 - Present',
     metadata: {}
   }
 ];

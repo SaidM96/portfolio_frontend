@@ -44,10 +44,10 @@ const MySkills: Skill[] = [
       'Node.js allows JavaScript to be used for server-side development, enabling scalable backend solutions. I’ve leveraged it to handle asynchronous operations, build APIs, and process real-time data efficiently.'
   },
   {
-    title: 'Tanstack Query',
+    title: 'React Query',
     icons: [SiReactquery],
     description:
-      'Tanstack Query is a data-fetching library for Js / Ts . It has enhanced my ability to handle server state, optimizing data synchronization and providing a smoother user experience.'
+      'React Query is a data-fetching library for Js / Ts . It has enhanced my ability to handle server state, optimizing data synchronization and providing a smoother user experience.'
   },
   {
     title: 'Next.js',

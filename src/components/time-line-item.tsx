@@ -27,7 +27,7 @@ export default function TimelineItem({
           rotateY: isRight ? -360 : 360,
           transition: { duration: 1.5 }
         }}
-        onClick={() => setOpenDrawer(curr => !curr)}
+        // onClick={() => setOpenDrawer(curr => !curr)}
         className={cn(
           isRight
             ? 'text-start sm:hover:!translate-x-10'
