@@ -30,7 +30,7 @@ export default function Home() {
 
       <section
         ref={homePageRef}
-        className='flex section flex-col h-full w-full items-center pt-[10%] sm:pt-[10%] pb-6 lg:pt-12 xl:pt-[15%]  px-4 sm:px-[7%]'
+        className='flex section flex-col h-full w-full items-center pt-12 lg:pt-20 xl:pt-[15%] px-4 sm:px-[7%]'
       >
         <HomePage
           scrollToContactMeCallBack={scrollToPage.bind(null, contactRef)}

@@ -59,7 +59,7 @@ export default function HomePage({
             />
           </p>
 
-          <p className='xl:text-xl text-sm sm:text-lg font-bold sm:px-20 xl:px-0'>
+          <p className='xl:text-xl text-sm sm:text-lg font-bold max-xl:w-3/4 max-xl:self-center xl:px-0'>
             As a Full Stack Developer and a student at 1337 Coding school ( Part
             of 42 Network ), I am deeply passionate about computer science and
             problem-solving. My primary focus lies in web development, where I
@@ -146,7 +146,7 @@ export default function HomePage({
               strokeLinejoin={'round'}
               cx={253}
               cy={253}
-              r={250}
+              r={240}
               initial={{
                 strokeDasharray: '15 120 25 25'
               }}
