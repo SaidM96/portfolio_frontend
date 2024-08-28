@@ -39,14 +39,14 @@ export default function Home() {
 
       <section
         ref={skillsRef}
-        className='flex section w-full flex-col items-center pt-[10%] px-4 sm:px-[7%]'
+        className='flex section w-full flex-col items-center pt-16 sm:pt-[10%] px-4 sm:px-[7%]'
       >
         <Skills />
       </section>
 
       <section
         ref={experiencesRef}
-        className='flex section w-full flex-col items-center pt-[5%] px-4 sm:px-[7%]'
+        className='flex section w-full flex-col items-center pt-[10%] px-4 sm:px-[7%]'
       >
         <Experiences />
       </section>

@@ -1,14 +1,11 @@
 'use client';
-import Image from 'next/image';
-import { FaTwitter } from 'react-icons/fa';
-import { FaGithub, FaLinkedin } from 'react-icons/fa6';
-import { IoCallSharp } from 'react-icons/io5';
 import { motion } from 'framer-motion';
-import { FiDownload } from 'react-icons/fi';
-import { TypeAnimation } from 'react-type-animation';
-import { Parallax } from 'react-scroll-parallax';
+import Image from 'next/image';
 import Link from 'next/link';
-import { FaInstagram } from 'react-icons/fa';
+import { FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { Parallax } from 'react-scroll-parallax';
+import { TypeAnimation } from 'react-type-animation';
 
 const Icons = [
   {
