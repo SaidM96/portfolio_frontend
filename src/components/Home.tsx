@@ -32,7 +32,7 @@ export default function HomePage({
   scrollToContactMeCallBack: () => void;
 }) {
   return (
-    <div className='flex h-full flex-col items-center xl:items-start xl:flex-row w-full text-white justify-center gap-10 xl:justify-between '>
+    <div className='flex h-full flex-col items-center xl:items-start xl:pt-16 xl:flex-row w-full text-white justify-center gap-10 xl:justify-between '>
       <div className='flex h-1/2 flex-col xl:h-full justify-center space-y-3 sm:space-y-6 xl:justify-start  xl:pt-20 xl:items-start w-full xl:w-1/2 xl:order-none order-2 items-center text-center xl:text-start'>
         <div className='flex flex-col space-y-2 sm:space-y-4 text-white'>
           <h1 className='xl:text-3xl 2xl:text-6xl text-2xl font-bold'>

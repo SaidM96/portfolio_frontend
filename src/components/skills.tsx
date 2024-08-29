@@ -120,7 +120,7 @@ export default function Skills() {
                 }}
                 className={cn(
                   'h-12 sm:h-16 m-0',
-                  'border-2 flex cursor-pointer items-center justify-center gap-2 text-primary border-primary hover:bg-primary hover:!text-background rounded-[24px]'
+                  'sm:border-2 flex cursor-pointer items-center justify-center gap-2 text-primary border-primary hover:bg-primary hover:!text-background rounded-[24px]'
                 )}
               >
                 {skill.icons.map((Icon, i) => (

@@ -56,7 +56,7 @@ export default function Header({
       style={{
         backdropFilter: 'blur(10px)'
       }}
-      className='fixed z-10 flex items-center justify-between w-full px-4 sm:px-[7%] p-4 sm:p-6 bg-transparent'
+      className='fixed z-10 flex items-center justify-between w-full px-4 sm:px-[7%] p-2 sm:pt-6 bg-transparent'
     >
       <p className='font-bold text-2xl 2xl:text-4xl text-white'>
         {'Said '}
