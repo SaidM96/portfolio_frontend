@@ -58,11 +58,7 @@ export default function Contact() {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
-    // mutation.mutate({ ...data });
-    toast({
-      title: 'Email sent successfully',
-      description: new Date().toLocaleString()
-    });
+    mutation.mutate({ ...data });
   };
 
   return (
