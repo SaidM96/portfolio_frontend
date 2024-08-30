@@ -3,7 +3,7 @@ import type { AxiosInstance } from 'axios';
 
 export default function api() {
   const apiClient: AxiosInstance = axios.create({
-    baseURL: 'http://localhost:3000/',
+    baseURL: `${process.env.API_BASE_URL}`,
     timeout: 60000,
     headers: {
       Accept: 'application/json',

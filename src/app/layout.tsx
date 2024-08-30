@@ -2,15 +2,14 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { Providers } from './provider';
-import Header from '@/components/header';
 import ReactQueryProvider from '@/lib/provider';
 import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Create Next App',
-  description: 'By Said'
+  title: 'Portfolio Website',
+  description: 'By Mia Said'
 };
 
 export default function RootLayout({
