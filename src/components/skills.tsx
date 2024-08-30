@@ -17,6 +17,8 @@ import { motion } from 'framer-motion';
 import { IoMdClose } from 'react-icons/io';
 import { TypeAnimation } from 'react-type-animation';
 import { TbBrandFramerMotion } from 'react-icons/tb';
+import { AiFillOpenAI } from 'react-icons/ai';
+import { BiLogoCPlusPlus } from 'react-icons/bi';
 
 type Skill = {
   title: string;
@@ -29,75 +31,76 @@ const MySkills: Skill[] = [
     title: '',
     icons: [SiJavascript, SiTypescript],
     description:
-      'JavaScript is essential for dynamic web development, while TypeScript adds static typing for enhanced reliability. I’ve utilized these to create robust, maintainable web applications, improving code quality and developer experience.'
+      'I am proficient in JavaScript and TypeScript, which form the backbone of my web development expertise. These languages have empowered me to build robust, scalable, and maintainable applications.'
   },
   {
     title: 'React.js',
     icons: [FaReact],
     description:
-      'React.js is a library for building user interfaces with a component-based approach. I’ve used it to create interactive and responsive UIs, efficiently managing state and enhancing the user experience.'
+      'React.js is at the core of my front-end development skills, allowing me to create dynamic and responsive user interfaces. It has been instrumental in shaping my approach to building modern web applications.'
   },
   {
     title: 'Node.js',
     icons: [RiNodejsFill],
     description:
-      'Node.js allows JavaScript to be used for server-side development, enabling scalable backend solutions. I’ve leveraged it to handle asynchronous operations, build APIs, and process real-time data efficiently.'
+      'With Node.js, I build efficient server-side applications and RESTful APIs. It has deepened my understanding of backend development, enabling me to create seamless full-stack applications.'
   },
   {
     title: 'React Query',
     icons: [SiReactquery],
     description:
-      'React Query is a data-fetching library for Js / Ts . It has enhanced my ability to handle server state, optimizing data synchronization and providing a smoother user experience.'
+      'React Query has been a game-changer in managing server state efficiently in React applications. It has enhanced my ability to handle data fetching and caching with ease.'
   },
   {
     title: 'Next.js',
     icons: [RiNextjsFill],
     description:
-      'Next.js is a React framework for server-side rendering (SSR) and static site generation (SSG). It’s helped me build SEO-friendly, performant web applications with advanced routing and API handling.'
+      'Next.js allows me to build full-stack React applications with server-side rendering and static site generation. This has significantly improved my skills in SEO and web performance optimization.'
   },
   {
     title: 'Redux',
     icons: [TbBrandRedux],
     description:
-      'Redux is a state management tool for JavaScript applications, particularly with React. It has taught me how to manage complex application state centrally, simplifying debugging and testing processes.'
+      'Redux is my go-to for managing complex application states. It has been crucial in maintaining predictable and consistent state management in large-scale projects.'
   },
   {
     title: 'Framer Motion',
     icons: [TbBrandFramerMotion],
     description:
-      'Framer Motion is a powerful animation library for React. It has enabled me to create smooth, interactive animations and transitions, bringing dynamic, responsive experiences to web applications. With Framer Motion, I’ve enhanced user engagement by crafting animations that feel natural and perform well.'
+      'Framer Motion enables me to create smooth and interactive animations, enhancing the user experience of my applications. It has been key in bringing interfaces to life.'
   },
   {
     title: 'Shadcn UI',
     icons: [SiShadcnui],
     description:
-      'Shadcn UI is a collection of modern UI components designed for web applications. It’s allowed me to implement consistent and accessible interfaces, improving the overall design and user experience.'
+      'I use Shadcn UI to build accessible and customizable UI components. This tool has allowed me to craft user-friendly interfaces that prioritize both form and function.'
   },
   {
     title: 'Tailwind CSS',
     icons: [RiTailwindCssFill],
     description:
-      'Tailwind CSS is a utility-first framework that simplifies styling with predefined classes. I’ve used it to quickly build responsive, custom designs without writing extensive CSS.'
+      'Tailwind CSS is my preferred utility-first CSS framework for rapid UI development. It has streamlined my design process and ensured consistency across projects.'
   },
   {
     title: 'Git',
     icons: [FaGithub],
     description:
-      'Git is a version control system essential for managing code changes and collaboration. It has helped me maintain project history, coordinate work in teams, and streamline the development process.'
+      'Git is essential to my workflow, enabling effective version control and collaboration. It has been vital in managing and deploying code across diverse projects and teams.'
   },
   {
-    title: 'Docker',
-    icons: [FaDocker],
+    title: 'OpenAI',
+    icons: [AiFillOpenAI],
     description:
-      'Docker is a platform for containerizing applications, ensuring consistent environments across different stages. I’ve used it to simplify deployment, scaling, and maintaining reliable software environments.'
+      'I leverage OpenAI tools to integrate cutting-edge AI features into applications. This has broadened my understanding of AI’s potential in enhancing modern software.'
   },
   {
-    title: 'Bash',
-    icons: [SiGnubash],
+    title: 'C++',
+    icons: [BiLogoCPlusPlus],
     description:
-      'Bash is a command-line shell for Unix-based systems, useful for scripting and automation. It’s enabled me to automate repetitive tasks, streamline workflows, and improve productivity through command-line operations.'
+      'With a strong foundation in C/C++, I have mastered memory management and implemented complex algorithms. These languages have solidified my understanding of core computer science principles.'
   }
 ];
+
 
 export default function Skills() {
   const [seeDetails, setseeDetails] = useState(false);
