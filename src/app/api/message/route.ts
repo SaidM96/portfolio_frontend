@@ -49,7 +49,7 @@ const generateHtml = (
 export async function POST(req: Request) {
   if (req.method === 'POST') {
     const { email, subject, message } = await req.json();
-
+    if (!email || !subject || !message)  return NextResponse.json({ message: 'subject , meessage and email are required' });
     try {
       const transporter: Transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
