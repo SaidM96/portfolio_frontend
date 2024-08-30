@@ -68,18 +68,7 @@ export async function POST(req: Request) {
         html
       };
       await transporter.sendMail(mailOptions);
-      return new Response(
-        'Email sent successfully',
-        {
-          status: 200,
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type, Authorization'
-          }
-        }
-      );
-      // return NextResponse.json({message: 'Email sent successfully' });
+      return NextResponse.json({message: 'Email sent successfully' });
     } catch (error) {
       console.error('Error sending email: ', error);
       return NextResponse.json({message: 'Email not sent' });
