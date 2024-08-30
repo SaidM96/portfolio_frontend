@@ -4,6 +4,7 @@ import './globals.css';
 import { Providers } from './provider';
 import Header from '@/components/header';
 import ReactQueryProvider from '@/lib/provider';
+import { Toaster } from '@/components/ui/toaster';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             </ReactQueryProvider>
           </Providers>
         </main>
+        <Toaster />
       </body>
     </html>
   );

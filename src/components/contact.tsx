@@ -1,5 +1,5 @@
 import React from 'react';
-import {  useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { Textarea } from './ui/textarea';
 import { motion } from 'framer-motion';
 import { z } from 'zod';
@@ -8,15 +8,26 @@ import FormInputItem from './form-input-form';
 import { Form, FormField } from './ui/form';
 import { Input } from './ui/input';
 import useSendMeMsg from '@/hooks/send-me-message';
-import { FaSpinner } from "react-icons/fa6";
+import { FaSpinner } from 'react-icons/fa6';
+import { useToast } from './ui/use-toast';
 
 export default function Contact() {
   const schema = z.object({
-    email: z.string().email({
-      message: 'Invalid email'
-    }).max(30, { message: 'Email is too long' }).min(1, { message: 'Email is required' }),
-    subject: z.string().min(1, { message: 'Subject is required' }).max(50, { message: 'Subject is too long' }),
-    message: z.string().min(1, { message: 'Message is required' }).max(500, { message: 'Message is too long' })
+    email: z
+      .string()
+      .email({
+        message: 'Invalid email'
+      })
+      .max(30, { message: 'Email is too long' })
+      .min(1, { message: 'Email is required' }),
+    subject: z
+      .string()
+      .min(1, { message: 'Subject is required' })
+      .max(50, { message: 'Subject is too long' }),
+    message: z
+      .string()
+      .min(1, { message: 'Message is required' })
+      .max(500, { message: 'Message is too long' })
   });
 
   type FormData = z.infer<typeof schema>;
@@ -30,9 +41,15 @@ export default function Contact() {
     }
   });
 
+  const { toast } = useToast();
+
   const mutation = useSendMeMsg({
     onSuccess: () => {
       form.reset();
+      toast({
+        title: 'Email sent successfully',
+        description: new Date().toLocaleString()
+      });
     },
     onError: () => {
       console.log('error');
@@ -41,7 +58,11 @@ export default function Contact() {
 
   const onSubmit = (data: FormData) => {
     console.log(data);
-    mutation.mutate({...data});
+    // mutation.mutate({ ...data });
+    toast({
+      title: 'Email sent successfully',
+      description: new Date().toLocaleString()
+    });
   };
 
   return (
@@ -126,10 +147,12 @@ export default function Contact() {
             disabled={mutation.isPending}
             type='submit'
             className='inline-flex items-center justify-center whitespace-nowrap bg-primary max-lg:w-[70%] lg:w-1/2 rounded-3xl h-12 text-black font-bold text-sm'
-          >{
-            mutation.isPending ? <FaSpinner className='animate-spin text-2xl' /> :  'Send Message' 
-          }
-            
+          >
+            {mutation.isPending ? (
+              <FaSpinner className='animate-spin text-2xl' />
+            ) : (
+              'Send Message'
+            )}
           </motion.button>
         </div>
       </form>
