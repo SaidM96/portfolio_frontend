@@ -44,11 +44,11 @@ export default function HomePage({
             <TypeAnimation
               className='text-primary 2xl:text-3xl lg:text-2xl text-xl'
               sequence={[
-                'Frontend Developer',
+                'Software Engineer',
                 1000,
-                'Mobile Developer',
+                'Web/Mobile Developer',
                 1000,
-                'Full Stack Engineer',
+                'Full Stack Developer',
                 1000
               ]}
               speed={50}
@@ -57,9 +57,9 @@ export default function HomePage({
           </p>
 
           <p className='xl:text-xl text-sm sm:text-lg font-bold max-xl:w-3/4 max-xl:self-center xl:px-0'>
-            As a Full Stack Developer and a student at 1337 Coding school ( Part
+            I'm a software engineer and a student at 1337 Coding school ( Part
             of 42 Network ), I am deeply passionate about computer science and
-            problem-solving. My primary focus lies in web development, where I
+            problem-solving. My primary focus lies in web/mobile development, where I
             leverage my skills to create efficient, user-friendly solutions
           </p>
         </div>

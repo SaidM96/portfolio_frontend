@@ -30,7 +30,7 @@ const Exp = [
   {
     Icon: FaReact,
     title: 'Lendstack',
-    description: 'Frontend developer: Nextjs / Typescript',
+    description: 'Software Engineer: Nextjs / NestJs',
     year: '2023 - (11 Months)',
     metadata: {}
   }
