@@ -57,10 +57,10 @@ export default function HomePage({
           </p>
 
           <p className='xl:text-xl text-sm sm:text-lg font-bold max-xl:w-3/4 max-xl:self-center xl:px-0'>
-            I'm a software engineer and a student at 1337 Coding school ( Part
+            {`I'm a software engineer and a student at 1337 Coding school ( Part
             of 42 Network ), I am deeply passionate about computer science and
             problem-solving. My primary focus lies in web/mobile development, where I
-            leverage my skills to create efficient, user-friendly solutions
+            leverage my skills to create efficient, user-friendly solutions`}
           </p>
         </div>
 
