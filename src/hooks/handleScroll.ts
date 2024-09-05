@@ -1,16 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 
+export type SectionInView = 'Home' | 'Skills' | 'Experiences' | 'Contact me';
 export default function useHandleScroll() {
   const homePageRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
 
-  const [sectionInView, setSectionInView] = useState<
-    'Home' | 'Skills' | 'Experiences' | 'Contact me'
-  >('Home');
+  const [sectionInView, setSectionInView] = useState<SectionInView>('Home');
 
-  const NavItems = [
+  const NavItems: { name: SectionInView; ref: React.RefObject<HTMLDivElement> }[] = [
     {
       name: 'Home',
       ref: homePageRef
@@ -39,11 +38,7 @@ export default function useHandleScroll() {
             );
             if (section) {
               setSectionInView(
-                section.name as
-                  | 'Home'
-                  | 'Skills'
-                  | 'Experiences'
-                  | 'Contact me'
+                section.name
               );
             }
           }

@@ -47,7 +47,6 @@ const generateHtml = (
     </html>`;
 
 export async function POST(req: Request) {
-  console.log(process.env.SMTP_SERVICE);
   if (req.method === 'POST') {
     const { email, subject, message } = await req.json();
     if (!email || !subject || !message)  return NextResponse.json({ message: 'subject , meessage and email are required' });

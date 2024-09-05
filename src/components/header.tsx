@@ -11,13 +11,14 @@ import {
   DrawerTitle,
   DrawerTrigger
 } from './ui/drawer';
+import { SectionInView } from '@/hooks/handleScroll';
 
 type Props = {
   homePageRefCall: () => void;
   experiencesRefCall: () => void;
   contactRefCall: () => void;
   skillsPageRefCall: () => void;
-  selectedSection: 'Home' | 'Skills' | 'Experiences' | 'Contact me';
+  selectedSection: SectionInView;
 };
 
 export default function Header({
@@ -59,7 +60,7 @@ export default function Header({
       }}
       className='fixed z-10 flex items-center justify-between w-full px-4 sm:px-[7%] p-2 sm:pt-6 bg-transparent'
     >
-      <p className='font-bold text-2xl 2xl:text-4xl text-white'>
+      <p onClick={homePageRefCall} className='cursor-pointer font-bold text-2xl 2xl:text-4xl text-white'>
         {'Said '}
         <span className='text-primary'>mia</span>
       </p>
