@@ -19,6 +19,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { TbBrandFramerMotion } from 'react-icons/tb';
 import { AiFillOpenAI } from 'react-icons/ai';
 import { BiLogoCPlusPlus } from 'react-icons/bi';
+import { TbBrandReactNative } from 'react-icons/tb';
 
 type Skill = {
   title: string;
@@ -37,7 +38,7 @@ const MySkills: Skill[] = [
     title: 'React.js',
     icons: [FaReact],
     description:
-      'React.js is at the core of my front-end development skills, allowing me to create dynamic and responsive user interfaces. It has been instrumental in shaping my approach to building modern web applications.'
+      'With React.js, I create dynamic and efficient user interfaces. By leveraging React Query and Redux, I manage data fetching, caching, and complex state management, ensuring a seamless and scalable user experience in my applications.'
   },
   {
     title: 'Node.js',
@@ -46,10 +47,10 @@ const MySkills: Skill[] = [
       'With Node.js, I build efficient server-side applications and RESTful APIs. It has deepened my understanding of backend development, enabling me to create seamless full-stack applications.'
   },
   {
-    title: 'React Query',
-    icons: [SiReactquery],
+    title: 'React Native',
+    icons: [TbBrandReactNative],
     description:
-      'React Query has been a game-changer in managing server state efficiently in React applications. It has enhanced my ability to handle data fetching and caching with ease.'
+      'React Native allows me to build cross-platform mobile applications using JavaScript, delivering high-quality native experiences for both iOS and Android devices.'
   },
   {
     title: 'Next.js',
@@ -100,7 +101,6 @@ const MySkills: Skill[] = [
       'With a strong foundation in C/C++, I have mastered memory management and implemented complex algorithms. These languages have solidified my understanding of core computer science principles.'
   }
 ];
-
 
 export default function Skills() {
   const [seeDetails, setseeDetails] = useState(false);
