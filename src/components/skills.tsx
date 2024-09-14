@@ -1,25 +1,19 @@
 import { cn } from '@/lib/utils';
-import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { AiFillOpenAI } from 'react-icons/ai';
+import { BiLogoCPlusPlus } from 'react-icons/bi';
 import { FaReact } from 'react-icons/fa';
-import { FaDocker, FaGithub } from 'react-icons/fa6';
+import { FaGithub } from 'react-icons/fa6';
+import { IoMdClose } from 'react-icons/io';
 import { IconType } from 'react-icons/lib';
 import { RiNextjsFill, RiNodejsFill, RiTailwindCssFill } from 'react-icons/ri';
 import {
-  SiCplusplus,
-  SiGnubash,
   SiJavascript,
-  SiReactquery,
   SiShadcnui,
   SiTypescript
 } from 'react-icons/si';
-import { TbBrandRedux } from 'react-icons/tb';
-import { motion } from 'framer-motion';
-import { IoMdClose } from 'react-icons/io';
-import { TypeAnimation } from 'react-type-animation';
-import { TbBrandFramerMotion } from 'react-icons/tb';
-import { AiFillOpenAI } from 'react-icons/ai';
-import { BiLogoCPlusPlus } from 'react-icons/bi';
-import { TbBrandReactNative } from 'react-icons/tb';
+import { TbBrandFramerMotion, TbBrandReactNative, TbBrandRedux } from 'react-icons/tb';
 
 type Skill = {
   title: string;
