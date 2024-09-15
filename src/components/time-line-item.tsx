@@ -32,7 +32,7 @@ export default function TimelineItem({
           isRight
             ? 'text-start sm:hover:!translate-x-10'
             : 'text-end sm:hover:!-translate-x-10',
-          'items-center cursor-pointer w-[250px] transform transition-transform duration-200 ease-in-out max-s:hover:!translate-x-2 max-sm:hover:!translate-x-4 max-sm:!text-start sm:w-[300px] xl:w-[400px] text-white text-xs s:text-sm sm:text-lg font-bold'
+          'max-sm:pb-3 items-center cursor-pointer w-[280px] transform transition-transform duration-200 ease-in-out max-s:hover:!translate-x-2 max-sm:hover:!translate-x-4 max-sm:!text-start sm:w-[300px] xl:w-[400px] text-white text-xs s:text-sm sm:text-lg font-bold'
         )}
       >
         <p className='px-2'>{year}</p>
