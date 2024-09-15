@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 
-export type SectionInView = 'Home' | 'Skills' | 'Experiences' | 'Contact me';
+export type SectionInView = 'Home' | 'Skills' | 'Experiences' | 'Projects' |'Contact me';
 export default function useHandleScroll() {
   const homePageRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
   const skillsRef = useRef<HTMLDivElement>(null);
 
@@ -21,6 +22,10 @@ export default function useHandleScroll() {
     {
       name: 'Experiences',
       ref: experiencesRef
+    },
+    {
+      name: 'Projects',
+      ref: projectsRef
     },
     {
       name: 'Contact me',
@@ -64,6 +69,7 @@ export default function useHandleScroll() {
     homePageRef: homePageRef,
     skillsRef: skillsRef,
     experiencesRef: experiencesRef,
+    projectsRef: projectsRef,
     contactRef: contactRef,
     sectionInView: sectionInView
   };

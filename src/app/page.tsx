@@ -3,6 +3,7 @@ import Contact from '@/components/contact';
 import Experiences from '@/components/experieces';
 import Header from '@/components/header';
 import HomePage from '@/components/Home';
+import Projects from '@/components/projects';
 import Skills from '@/components/skills';
 import useHandleScroll from '@/hooks/handleScroll';
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
     sectionInView,
     homePageRef,
     experiencesRef,
+    projectsRef,
     contactRef,
     skillsRef
   } = useHandleScroll();
@@ -25,6 +27,7 @@ export default function Home() {
         skillsPageRefCall={scrollToPage.bind(null, skillsRef)}
         homePageRefCall={scrollToPage.bind(null, homePageRef)}
         experiencesRefCall={scrollToPage.bind(null, experiencesRef)}
+        projectsRefCall={scrollToPage.bind(null, projectsRef)}
         contactRefCall={scrollToPage.bind(null, contactRef)}
       />
 
@@ -49,6 +52,13 @@ export default function Home() {
         className='flex section w-full flex-col items-center  pt-14 sm:pt-20 px-4 sm:px-[7%]'
       >
         <Experiences />
+      </section>
+
+      <section
+        ref={projectsRef}
+        className='flex section w-full flex-col items-center  pt-14 sm:pt-20 px-4 sm:px-[7%]'
+      >
+        <Projects />
       </section>
 
       <section

@@ -1,7 +1,7 @@
 'use client';
-import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
 import Drawer from './dialog';
 
 export default function TimelineItem({
