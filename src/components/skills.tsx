@@ -101,7 +101,7 @@ export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState<Skill | null>(null);
 
   return (
-    <div className='flex flex-col items-center w-full h-full space-y-16 mt-6'>
+    <div className='flex flex-col items-center w-full h-full space-y-16 mt-12'>
       <h1 className='text-2xl sm:text-4xl  text-white text-center font-bold'>
         My <span className='text-primary'>Skills</span>
       </h1>

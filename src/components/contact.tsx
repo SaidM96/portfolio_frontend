@@ -65,7 +65,7 @@ export default function Contact() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className='flex flex-col items-center w-full h-full mt-6'
+        className='flex flex-col items-center w-full h-full mt-12'
       >
         <h1 className='text-2xl sm:text-4xl  text-white text-center font-bold'>
           Contact <span className='text-primary'>me</span>

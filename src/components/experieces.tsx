@@ -71,7 +71,7 @@ export default function Experiences() {
   const [swap, setSwap] = useState(false);
 
   return (
-    <div className='flex flex-col items-center sm:space-y-10 xl:space-x-12 space-y-6 mt-6 w-full'>
+    <div className='flex flex-col items-center sm:space-y-10 xl:space-x-12 space-y-6 mt-12 w-full'>
       <h1 className='text-2xl sm:text-4xl  text-white text-center font-bold'>
         My <span className='text-primary'>Journey</span>
       </h1>
