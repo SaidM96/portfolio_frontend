@@ -1,71 +1,9 @@
 'use client';
-import { FaReact } from 'react-icons/fa';
+import { etudes, Exp } from '@/lib/data/experiences';
 import { cn } from '@/lib/utils';
-import TimeLine from './time-line';
 import { useState } from 'react';
+import TimeLine from './time-line';
 import { Button } from './ui/button';
-
-const Exp = [
-  {
-    Icon: FaReact,
-    title: 'Hood Businesses',
-    description: 'Full stack developer: reactjs / nodejs',
-    year: '2022 - 6 Months',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
-    title: 'Freelance',
-    description: 'Digital Store - Nextjs / Typescript',
-    year: '2022 - 3 Months',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
-    title: 'Freelance',
-    description: 'Landing Page - Nextjs / Typescript',
-    year: '2023 - 3 Months',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
-    title: 'Lendstack',
-    description: 'Software Engineer: Nextjs / NestJs',
-    year: '2023 - (11 Months)',
-    metadata: {}
-  }
-];
-
-const etudes = [
-  {
-    Icon: FaReact,
-    title: 'Anoual - High School',
-    description: 'Mathematics and sciences',
-    year: '2013 - 2014',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
-    title: 'Ibn zohr University',
-    description: 'Mathematics and Computer Science',
-    year: '2014 - 2018',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
-    title: '1337 Coding School',
-    description: 'Future Is Loading...',
-    year: '2021 - Present',
-    metadata: {}
-  },
-  {
-    Icon: FaReact,
-    title: 'Frontend Masters',
-    description: 'Path to Senior Developer',
-    year: '2023 - Present',
-    metadata: {}
-  }
-];
 
 export default function Experiences() {
   const [swap, setSwap] = useState(false);

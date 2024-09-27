@@ -4,7 +4,6 @@ import { cn } from '@/lib/utils';
 
 
 type ElementsType = {
-  Icon: IconType;
   title: string;
   description: string;
   year: string;

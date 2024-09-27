@@ -21,18 +21,14 @@ export default function TimelineItem({
 
   return (
     <div>
-      <motion.div
-        whileHover={{ scale: 1.1 }}
-        animate={{
-          rotateY: isRight ? -360 : 360,
-          transition: { duration: 1.5 }
-        }}
+      <div
+        // whileHover={{ scale: 1.1 }}
         // onClick={() => setOpenDrawer(curr => !curr)}
         className={cn(
           isRight
-            ? 'text-start sm:hover:!translate-x-10'
-            : 'text-end sm:hover:!-translate-x-10',
-          'max-sm:pb-3 items-center cursor-pointer w-[280px] transform transition-transform duration-200 ease-in-out max-s:hover:!translate-x-2 max-sm:hover:!translate-x-4 max-sm:!text-start sm:w-[300px] xl:w-[400px] text-white text-xs s:text-sm sm:text-lg font-bold'
+            ? 'text-start '
+            : 'text-end ',
+          'max-sm:pb-3 pt-1 items-center cursor-pointer w-[280px] max-sm:!text-start sm:w-[300px] xl:w-[400px] text-white text-xs s:text-sm sm:text-lg font-bold'
         )}
       >
         <p className='px-2'>{year}</p>
@@ -42,7 +38,7 @@ export default function TimelineItem({
             {description}
           </p>
         </div>
-      </motion.div>
+      </div>
       <Drawer
         openDrawer={openDrawer}
         closeOpenDrawer={setOpenDrawer.bind(null, false)}

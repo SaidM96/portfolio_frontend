@@ -7,6 +7,8 @@ import Projects from '@/components/projects';
 import Skills from '@/components/skills';
 import useHandleScroll from '@/hooks/handleScroll';
 export default function Home() {
+
+  // scroll to section by its reference
   const scrollToPage = (ref: React.RefObject<HTMLDivElement>) => {
     ref && ref.current?.scrollIntoView({ behavior: 'smooth' });
   };

@@ -1,6 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
-export type SectionInView = 'Home' | 'Skills' | 'Experiences' | 'Projects' |'Contact me';
+export type SectionInView =
+  | 'Home'
+  | 'Skills'
+  | 'Experiences'
+  | 'Projects'
+  | 'Contact me';
+
 export default function useHandleScroll() {
   const homePageRef = useRef<HTMLDivElement>(null);
   const experiencesRef = useRef<HTMLDivElement>(null);
@@ -10,7 +16,10 @@ export default function useHandleScroll() {
 
   const [sectionInView, setSectionInView] = useState<SectionInView>('Home');
 
-  const NavItems: { name: SectionInView; ref: React.RefObject<HTMLDivElement> }[] = [
+  const NavItems: {
+    name: SectionInView;
+    ref: React.RefObject<HTMLDivElement>;
+  }[] = useMemo(() => [
     {
       name: 'Home',
       ref: homePageRef
@@ -31,39 +40,41 @@ export default function useHandleScroll() {
       name: 'Contact me',
       ref: contactRef
     }
-  ];
+  ], [homePageRef, skillsRef, experiencesRef, projectsRef, contactRef]);
+
+  const handleIntersection = useCallback(
+    (entries: IntersectionObserverEntry[]) => {
+      if (entries[0].isIntersecting) {
+        const section = NavItems.find(
+          item => item.ref.current === entries[0].target
+        );
+        if (section) {
+          setSectionInView(section.name);
+        }
+      }
+    },
+    []
+  );
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const section = NavItems.find(
-              section => section.ref.current === entry.target
-            );
-            if (section) {
-              setSectionInView(
-                section.name
-              );
-            }
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.75 // Trigger when 75% of the section is in view
-      }
-    );
+    const observer = new IntersectionObserver(handleIntersection, {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.75
+    });
 
     NavItems.forEach(({ ref }) => {
       if (ref.current) observer.observe(ref.current);
     });
 
+  // Cleanup observer on unmount
     return () => {
-      observer.disconnect();
+      NavItems.forEach(({ ref }) => {
+        if (ref.current) observer.unobserve(ref.current);
+      });
+      observer.disconnect()
     };
-  });
+  }, [ handleIntersection ]);
 
   return {
     homePageRef: homePageRef,
