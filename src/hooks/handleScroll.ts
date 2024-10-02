@@ -23,10 +23,10 @@ export default function useHandleScroll() {
       name: 'Experiences',
       ref: experiencesRef
     },
-    {
-      name: 'Projects',
-      ref: projectsRef
-    },
+    // {
+    //   name: 'Projects',
+    //   ref: projectsRef
+    // },
     {
       name: 'Contact me',
       ref: contactRef

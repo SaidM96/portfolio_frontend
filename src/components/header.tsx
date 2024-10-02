@@ -17,7 +17,7 @@ type Props = {
   homePageRefCall: () => void;
   experiencesRefCall: () => void;
   contactRefCall: () => void;
-  projectsRefCall: () => void;
+  // projectsRefCall: () => void;
   skillsPageRefCall: () => void;
   selectedSection: SectionInView;
 };
@@ -25,7 +25,7 @@ type Props = {
 export default function Header({
   homePageRefCall,
   experiencesRefCall,
-  projectsRefCall,
+  // projectsRefCall,
   contactRefCall,
   skillsPageRefCall,
   selectedSection
@@ -43,10 +43,10 @@ export default function Header({
       name: 'Experiences',
       scrollCallBack: experiencesRefCall
     },
-    {
-      name: 'Projects',
-      scrollCallBack: projectsRefCall
-    },
+    // {
+    //   name: 'Projects',
+    //   scrollCallBack: projectsRefCall
+    // },
     {
       name: 'Contact me',
       scrollCallBack: contactRefCall
